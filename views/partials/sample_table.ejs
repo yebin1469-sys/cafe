@@ -1,0 +1,17 @@
+<table border="1">
+  <thead><tr><th>ID</th><th>메뉴</th><th>가격</th></tr></thead>
+  <tbody>
+    <br>
+    <a href="/"> 목록</a>
+     <a href="/insert"> 등록</a>
+    <a href="/update"> 수정 </a>
+    <a href="/delete"> 삭제 </a>
+    <br>
+    <% subjects.forEach((item) => { %>
+      <tr><td><%= item.id %></td><td><%= item.menu %></td><td><%= item.price %></td></tr>
+    <% }); %>
+    <% if (subjects.length === 0) { %>
+      <tr><td colspan="3">조회 결과가 없습니다.</td></tr>
+    <% } %>
+  </tbody>
+</table>

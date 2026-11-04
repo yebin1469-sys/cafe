@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>삭제</title></head>
+<body>
+  <h1>삭제</h1>
+  <form method="post" action="/delete">
+    <label>ID <input type="number" name="id" min="1" required></label>
+    <button type="submit">삭제</button>
+  </form>
+  <%- include("partials/sample_table", { subjects }) %>
+  <p>폼 또는 주소를 통해 요청하고 조회 결과를 확인하세요.</p>
+</body>
+</html>

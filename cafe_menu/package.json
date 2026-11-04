@@ -1,0 +1,14 @@
+{
+  "name": "cafe-menu",
+  "version": "1.0.0",
+  "description": "10주차 추가 실습 - 카페 메뉴 CRUD (Express + EJS + SQLite)",
+  "scripts": {
+    "init": "node init_db.js",
+    "start": "node step4_delete.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "ejs": "^3.1.9",
+    "express": "^4.19.0"
+  }
+}

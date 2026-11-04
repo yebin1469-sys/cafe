@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DB 할 일 목록</title>
+  <style>
+    body { font-family: sans-serif; background: #F9FAFB; color: #1F2937; }
+    main { max-width: 560px; margin: 40px auto; padding: 0 16px; }
+    li { list-style: none; background: #FFF; border: 1px solid #E5E7EB;
+         border-radius: 8px; padding: 12px; margin: 8px 0; }
+    ul { padding: 0; }
+    .done { text-decoration: line-through; color: #9CA3AF; }
+    .date { float: right; color: #9CA3AF; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>할 일 목록 (MySQL)</h1>
+
+    <% if (todos.length === 0) { %>
+      <p>할 일이 없습니다. lab3_crud.sql로 데이터를 넣어 보세요.</p>
+    <% } else { %>
+      <ul>
+        <% todos.forEach(function (todo) { %>
+          <li class="<%= todo.done ? 'done' : '' %>">
+            <%= todo.title %>
+            <span class="date"><%= new Date(todo.created_at).toLocaleDateString("ko-KR") %></span>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </main>
+</body>
+</html>

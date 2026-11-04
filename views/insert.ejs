@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>등록</title></head>
+<body>
+  <h1>등록</h1>
+  <form method="post" action="/insert">
+    <label>메뉴 <input name="subject" maxlength="100" required></label>
+    <label>가격 <input type="number" name="score" min="-2147483648" max="2147483647" required></label>
+    <button type="submit">등록</button>
+  </form>
+  <%- include("partials/sample_table", { subjects }) %>
+  <p>폼 또는 주소를 통해 요청하고 조회 결과를 확인하세요.</p>
+</body>
+</html>

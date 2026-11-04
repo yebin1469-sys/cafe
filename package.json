@@ -1,0 +1,18 @@
+{
+  "name": "week10-mysql",
+  "version": "1.0.0",
+  "description": "10주차 MySQL 연동 실습",
+  "scripts": {
+    "start": "node app.js",
+    "subject:select": "node subject_select.js",
+    "subject:insert": "node subject_ins.js",
+    "subject:edit": "node subject_edit.js",
+    "subject:delete": "node subject_del.js",
+    "subject:crud": "node subject_del.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.0",
+    "mysql2": "^3.9.0"
+  }
+}

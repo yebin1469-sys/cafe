@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>성적 추가</title><%- include("partials/subject_style") %></head>
+<body><main>
+  <p class="eyebrow">SUBJECT / CREATE</p><h1>성적 기록</h1><p class="intro">새 과목과 점수를 추가합니다. 점수는 0~100 사이의 정수입니다.</p>
+  <section class="panel"><form class="inline" method="POST" action="/subjects"><input name="subject" maxlength="100" placeholder="과목명" required><input name="score" type="number" min="0" max="100" step="1" placeholder="점수" required><button class="primary" type="submit">추가</button></form>
+    <table><thead><tr><th>ID</th><th>과목</th><th>점수</th></tr></thead><tbody><% subjects.forEach(function (item) { %><tr><td><%= item.id %></td><td><%= item.subject %></td><td class="score"><%= item.score %>점</td></tr><% }); %></tbody></table>
+  </section>
+</main></body></html>

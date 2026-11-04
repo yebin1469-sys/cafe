@@ -1,0 +1,20 @@
+{
+  "name": "cafe-menu-mysql",
+  "version": "1.0.0",
+  "private": true,
+  "description": "10주차 추가 실습 - 카페 메뉴 CRUD (Express + EJS + MySQL)",
+  "scripts": {
+    "init": "node init_db.js",
+    "check": "node check_db.js",
+    "step1": "node step1_list.js",
+    "step2": "node step2_create.js",
+    "step3": "node step3_update.js",
+    "start": "node step4_delete.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.0",
+    "mysql2": "^3.11.0"
+  }
+}
